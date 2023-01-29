@@ -2,8 +2,13 @@ import requests
 from time import sleep
 from bs4 import BeautifulSoup
 import os
-os.system('cls')
 options = {"1": "Search Animal", "2": "Search Aniaml By Locations","3":"List Animals By Letter"}
+
+def clear():
+    try:            
+        os.system('cls')
+    except:
+        os.system('clear')
 # Banner
 def banner():
     print('''\033[31m
@@ -29,6 +34,7 @@ def banner():
            *** Like a Pokedex but for real life animals *** \n''')
 
 while True:
+    clear()
     banner()
     for key in options:
         print(" ("+key + ") " + options[key])
@@ -41,7 +47,7 @@ while True:
         if search == '':
             print('Please Enter a animal')
             sleep(2)
-            os.system('cls')
+            clear()
         else:
             r = requests.get(url+search+"/",headers=headers)
             sleep(0.8)
@@ -50,11 +56,11 @@ while True:
             if r.status_code == 200:
                 print(f"\n[!] A \033[32m{search}\033[37m is an animal")
                 input('Press Enter to continue ...')
-                os.system('cls')
+                clear()
             else:
                 print(f"\n[X] A \033[31m{search}\033[37m is not an animal")
                 sleep(3)
-                os.system('cls')
+                clear()
 
     def location():
         site = "https://a-z-animals.com/animals/location/"
@@ -111,7 +117,7 @@ while True:
         except:
             print(f' [!] Could not find anywhere called { country_choice}')
             sleep(3)
-            os.system('cls')
+            clear()
             exit()
         print(f'\n [+] Gathering Countries in {country_choice}\n')
         sleep(1)
@@ -143,7 +149,7 @@ while True:
             if i == x:
                 break
         input('Press Enter to continue ...')
-        os.system('cls')
+        clear()
             
     def letter():
         letter = input(" (Q) What letter of animals would you like to search for?: ")
@@ -159,7 +165,7 @@ while True:
         for letter in letters:
             print(" [+] ",letter.text)
         input("\nPress Enter to continue ...")
-        os.system('cls')
+        clear()
 
 
     if choice == "1":
