@@ -26,8 +26,7 @@ def banner():
    / /\ \ | '_ \| | '_ ` _ \ / _` | | | | | '_ \ / _` |/ _ \ \/ /
   / ____ \| | | | | | | | | | (_| | |_| |_| | | | (_| |  __/>  < 
  /_/    \_\_| |_|_|_| |_| |_|\__,_|_|_____|_| |_|\__,_|\___/_/\_\\ \n
-           *** Like a Pokedex but for real life animals ***
-''')
+           *** Like a Pokedex but for real life animals *** \n''')
 
 while True:
     banner()
