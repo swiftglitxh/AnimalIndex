@@ -1,4 +1,4 @@
-# AnimalIndex
+# AnimalIndex (under development) 
 ![image](https://user-images.githubusercontent.com/72777943/215344693-1493cac0-5f2a-4f19-9715-615245a4acd3.png)
 
 ## What is AnimalIndex?
